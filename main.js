@@ -30,15 +30,11 @@ function gearAngleChange() {
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
-    var width = 960,
-        height = 500,
+    const width = document.getElementById('gear-block').offsetWidth,
+        height = document.getElementById('gear-block').offsetHeight,
         radius = 80,
         x = Math.sin(2 * Math.PI / 3),
         y = Math.cos(2 * Math.PI / 3);
-
-    var offset = 0,
-        speed = 4,
-        start = Date.now();
 
     var svg = d3.select("#gear-block").append("svg")
         .attr("width", width)
@@ -82,17 +78,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         .datum({teeth: 32, radius: -radius * 2})
         .append("path")
         .attr("d", gear);
-
-    // d3.selectAll("input[name=reference]")
-    //     .data([radius * 5, Infinity, -radius])
-    //     .on("change", function(radius1) {
-    //         var radius0 = frame.datum().radius, angle = (Date.now() - start) * speed;
-    //         frame.datum({radius: radius1});
-    //         svg.attr("transform", "rotate(" + (offset += angle / radius0 - angle / radius1) + ")");
-    //     });
-
-    // d3.selectAll("input[name=speed]")
-    //     .on("change", function() { speed = +this.value; });
 
     function gear(d) {
         var n = d.teeth,
