@@ -38,6 +38,10 @@ header {
     font-size: 1.2em;
 }
 
+.next-section {
+    transition: all 400ms;
+}
+
 .next-section:hover, .nav-link:hover {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
