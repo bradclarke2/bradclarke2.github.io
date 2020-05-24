@@ -2,7 +2,7 @@
   "name": "vanilla",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/bradclarke2/bradclarke2.github.io#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.3"
   }
 }
